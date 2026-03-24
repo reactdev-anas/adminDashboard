@@ -11,7 +11,7 @@ const Sidebar = ({ setActivePage, activePage }) => {
 
   return (
     <>
-      <div className="fixed bottom-4 ml-2 mr-6 md:ml-0 md:mx-0   left-4 right-4 h-13 md:relative md:bottom-0 md:left-0 md:h-full md:w-20 bg-black md:rounded-2xl rounded-xl shadow-xl flex flex-row md:flex-col justify-between px-6 md:py-6 items-center z-100">
+      <div className="fixed bottom-4 ml-2 mr-3 md:ml-0 md:mx-0   left-4 right-4 h-13 md:relative md:bottom-0 md:left-0 md:h-full md:w-20 bg-black md:rounded-2xl rounded shadow-xl flex flex-row md:flex-col justify-between px-6 md:py-6 items-center z-100">
         
         {/* TOP (Desktop) / LEFT (Mobile): Logo */}
         <div className="text-white text-lg md:text-3xl font-extrabold shrink-0">S.</div>

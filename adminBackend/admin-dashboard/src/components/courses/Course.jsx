@@ -66,18 +66,18 @@ const Course = () => {
             <h2 className="text-2xl font-semibold mt-3 mb-5">Courses</h2>
             <div className="flex flex-col gap-3">
                 {courses.map((course, idx) => (
-                    <div key={idx} className="flex flex-col sm:flex-row items-center justify-between bg-gray-100 px-4 py-3 rounded-lg shadow-sm hover:shadow-md transition gap-4">
+                    <div key={idx} className="flex flex-col sm:flex-row items-center justify-between bg-gray-100 p-6 md:px-4 mb-4 md:mb-0  md:py-3 rounded-lg shadow-sm hover:shadow-md transition gap-4">
                         <div className="flex items-center gap-3 w-full sm:w-auto">
-                            <img src={course.image} alt="" className="w-10 h-10 rounded-full object-cover" />
+                            <img src={course.image} alt="" className="w-12 h-12 md:h-10 md:w-10 text-xl md:text-lg rounded-full object-cover" />
                             <div>
-                                <h3 className="font-semibold text-sm md:text-base">{course.title}</h3>
-                                <p className="text-gray-500 text-xs">{course.duration} h</p>
+                                <h3 className="font-semibold text-lg md:text-base">{course.title}</h3>
+                                <p className="text-gray-500 text-md md:text-xs ">{course.duration} h</p>
                             </div>
                         </div>
                         <div className="text-yellow-500 md:font-semibold hidden md:block">★★★★☆</div>
-                        <div className="flex gap-2 w-full sm:w-auto">
-                            <button onClick={() => handleEdit(course)} className="flex-1 sm:flex-none bg-black cursor-pointer hover:bg-gray-800 transition text-white text-sm py-1 px-3 rounded">Edit</button>
-                            <button onClick={() => handleDeleteCourse(course._id)} className="flex-1 cursor-pointer sm:flex-none hover:bg-gray-800 transition bg-black text-white text-sm py-1 px-3 rounded">Delete</button>
+                        <div className="flex gap-2 mt-4 md:mt-0 w-full sm:w-auto">
+                            <button onClick={() => handleEdit(course)} className="flex-1 sm:flex-none bg-black cursor-pointer hover:bg-gray-800 transition text-white text-sm py-2 md:py-1 px-3 rounded">Edit</button>
+                            <button onClick={() => handleDeleteCourse(course._id)} className="flex-1 cursor-pointer sm:flex-none hover:bg-gray-800 transition bg-black text-white text-sm py-2 md:py-1 px-3 rounded">Delete</button>
                         </div>
                     </div>
                 ))}
