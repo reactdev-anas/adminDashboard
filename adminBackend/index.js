@@ -9,6 +9,7 @@ import courseRouter from "./routes/course.js"
 import jobRouter from "./routes/job.js"
 import contactRouter from "./routes/contact.js"
 import authRouter from "./routes/authRoute.js"
+import path from "path"
 
 const app = express();
 dotenv.config();
@@ -29,12 +30,20 @@ app.get("/api/admin/dashboard", protect, (req, res) => {
 
 DBConnection(process.env.MONGO_URI).then(()=> console.log("MongoDB is connected Successfully ✔️")).catch((error)=>console.log("MongoDb Error", error))
 
-app.get('/',(req,res)=>{
-    res.send("Server is running properly their is no problem of operating system")
-})
+// app.get('/',(req,res)=>{
+//     res.send("Server is running properly their is no problem of operating system")
+// })
 
 const PORT = process.env.PORT || 5001
 
 app.listen(PORT,()=>{
 console.log(`server is running on ${PORT}`)
 })
+
+if(process.env.NODE_ENV==='production'){
+  const dirPath = path.resolve();
+  app.use(express.static("./admin-dashboard/dist"));
+  app.get(/.*/,(req,res)=>{
+    res.sendFile(path.resolve(dirPath,'./admin-dashboard/dist','index.html'))
+  })
+}
