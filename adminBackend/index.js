@@ -34,11 +34,7 @@ DBConnection(process.env.MONGO_URI).then(()=> console.log("MongoDB is connected 
 //     res.send("Server is running properly their is no problem of operating system")
 // })
 
-const PORT = process.env.PORT || 5001
-
-app.listen(PORT,()=>{
-console.log(`server is running on ${PORT}`)
-})
+const PORT = process.env.PORT || 5002
 
 if(process.env.NODE_ENV==='production'){
   const dirPath = path.resolve();
@@ -47,3 +43,6 @@ if(process.env.NODE_ENV==='production'){
     res.sendFile(path.resolve(dirPath,'./admin-dashboard/dist','index.html'))
   })
 }
+app.listen(PORT,()=>{
+console.log(`server is running on ${PORT}`)
+})
