@@ -120,7 +120,7 @@ const Authentication = () => {
 
           <button
             type="submit"
-            className="w-full mt-8 bg-gray-900 text-white py-3.5 rounded font-bold hover:bg-black active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-gray-900/20"
+            className="w-full mt-8 cursor-pointer bg-gray-900 text-white py-3.5 rounded font-bold hover:bg-black active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-gray-900/20"
             disabled={loading}
           >
             {loading ? (
