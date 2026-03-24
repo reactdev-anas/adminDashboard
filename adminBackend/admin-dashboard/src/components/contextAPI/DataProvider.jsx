@@ -46,7 +46,7 @@ export const DataProvider = ({ children }) => {
   //   Object.keys(courseField).forEach((key) => formData.append(key, courseField[key]));
 
   //   try {
-  //     await axios.post("http://localhost:5001/api/courses", formData);
+  //     await axios.post("https://admindashboard-kom7.onrender.com/api/courses", formData);
   //     console.log("Data Saved Successfully ✅");
 
   //     setCourseField({ title: "", image: null, videoUrl: "", duration: "", description: "" });
@@ -65,7 +65,7 @@ export const DataProvider = ({ children }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/api/courses",
+        "https://admindashboard-kom7.onrender.com/api/courses",
         formData,
       );
       const newCourse = response.data.newCourse;
@@ -95,7 +95,7 @@ export const DataProvider = ({ children }) => {
   //   e.preventDefault();
 
   //   try {
-  //     await axios.post("http://localhost:5001/api/jobs", jobField);
+  //     await axios.post("https://admindashboard-kom7.onrender.com/api/jobs", jobField);
 
   //     console.log("Data Saved Successfully");
 
@@ -118,7 +118,7 @@ export const DataProvider = ({ children }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/api/jobs",
+        "https://admindashboard-kom7.onrender.com/api/jobs",
         jobField,
       );
       const newJob = response.data.newJob; // assume backend me naya job return ho raha hai
@@ -146,7 +146,7 @@ export const DataProvider = ({ children }) => {
 
   const getCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/courses");
+      const response = await axios.get("https://admindashboard-kom7.onrender.com/api/courses");
       setCourses(response.data.allCourses);
     } catch (error) {
       console.log("Error while fetching the data :", error);
@@ -155,7 +155,7 @@ export const DataProvider = ({ children }) => {
 
   const getAllJobs = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/jobs");
+      const response = await axios.get("https://admindashboard-kom7.onrender.com/api/jobs");
       const allJobs = response.data.alljobs; // ✅ correct
       console.log(allJobs);
 
@@ -168,7 +168,7 @@ export const DataProvider = ({ children }) => {
   const handleDeleteCourse = async (id) => {
     console.log(id);
     try {
-      await axios.delete(`http://localhost:5001/api/courses/${id}`);
+      await axios.delete(`https://admindashboard-kom7.onrender.com/api/courses/${id}`);
       console.log("Job Deleted Successfully");
 
       // Update state to remove deleted course
@@ -181,7 +181,7 @@ export const DataProvider = ({ children }) => {
   const handleDeleteJob = async (id) => {
     console.log(id);
     try {
-      await axios.delete(`http://localhost:5001/api/jobs/${id}`);
+      await axios.delete(`https://admindashboard-kom7.onrender.com/api/jobs/${id}`);
       console.log("Job Deleted Successfully");
 
       // Update state to remove deleted job
@@ -223,7 +223,7 @@ export const DataProvider = ({ children }) => {
   //   Object.keys(courseField).forEach((key) => formData.append(key, courseField[key]));
 
   //   try {
-  //     await axios.put(`http://localhost:5001/api/courses/${id}`, formData);
+  //     await axios.put(`https://admindashboard-kom7.onrender.com/api/courses/${id}`, formData);
   //     console.log("Course updated successfully ✅");
 
   //     // Reset form and toggle
@@ -247,7 +247,7 @@ export const DataProvider = ({ children }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5001/api/courses/${id}`,
+        `https://admindashboard-kom7.onrender.com/api/courses/${id}`,
         formData,
       );
       const updatedCourse = response.data.updatedCourse;
@@ -283,7 +283,7 @@ export const DataProvider = ({ children }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5001/api/jobs/${jobId}`,
+        `https://admindashboard-kom7.onrender.com/api/jobs/${jobId}`,
         jobField,
       );
 

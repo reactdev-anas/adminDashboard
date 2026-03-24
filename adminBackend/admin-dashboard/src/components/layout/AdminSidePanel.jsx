@@ -8,7 +8,7 @@ const AdminSidePanel = () => {
   
   const getAllJobs = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/jobs");
+      const response = await axios.get("https://admindashboard-kom7.onrender.com/api/jobs");
       const allJobs = response.data.alljobs; // ✅ correct
       console.log(allJobs)
 
@@ -23,7 +23,7 @@ const AdminSidePanel = () => {
 
   const getCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/courses");
+      const response = await axios.get("https://admindashboard-kom7.onrender.com/api/courses");
       setCourses(response.data.allCourses);
     } catch (error) {
       console.log("Error while fetching the data :", error);

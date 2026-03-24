@@ -43,7 +43,7 @@
 //         formData.append(key, courseFeild[key]);
 //       });
 
-//       await axios.post("http://localhost:5001/api/courses", formData, {
+//       await axios.post("https://admindashboard-kom7.onrender.com/api/courses", formData, {
 //         headers: {
 //           "Content-Type": "multipart/form-data",
 //         },

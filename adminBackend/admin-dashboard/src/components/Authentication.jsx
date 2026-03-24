@@ -14,7 +14,7 @@ const Authentication = () => {
   //   setError("");
 
   //   try {
-  //     const  data  = await axios.post("http://localhost:5001/api/auth/login", {
+  //     const  data  = await axios.post("https://admindashboard-kom7.onrender.com/api/auth/login", {
   //       email,
   //       password,
   //     });
@@ -38,7 +38,7 @@ const Authentication = () => {
   try {
 
     const { data } = await axios.post(
-      "http://localhost:5001/api/auth/login",
+      "https://admindashboard-kom7.onrender.com/api/auth/login",
       {
         email,
         password,
